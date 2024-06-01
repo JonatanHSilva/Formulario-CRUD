@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Cadastro de Eventos</title>
+        <link rel="stylesheet" href="telacadastro.css">
+    </head>
+    <body>
+        <div class="formHead">
+            <h1>Cadastro Eventos</h1>
+        </div>
+        <div class="formMenu">
+            <ul>
+                <li>
+                    <a href="selectDB.php?pag=0">Listar Eventos</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="formContent">
+            <form id="formInsert" method="POST" action="insertDB.php">
+                
+                <p><b>Nome do Evento<br></b>
+                    <input type="text" name="nomeEvento" id="nomeEvento" >
+                </p>
+
+                <p><b>Descrição do Evento<br></b>
+                    <textarea name="descEvento" id="descEvento" rows="5" cols="40" placeholder="Descreva o evento..." ></textarea>
+                </p>
+
+                <p><b>Data de Início<br></b>
+                    <input type="datetime-local" id="dataInic" name="dataInic">
+                </p>
+
+                <p><b>Data de Encerramento<br></b>
+                    <input type="datetime-local" id="dataEncer" name="dataEncer">
+                </p>
+
+                <p><b>Tipo do Evento<br></b>
+                    <input type="text" name="tipoEven" id="tipoEven" placeholder="Ex: Aniversário, Casamento, etc.">
+                </p>
+
+                <p><b>Banner do Evento<br></b>
+                    <input type="file" name="bannerEven" id="bannerEven" accept="image/*" >
+                </p>
+                
+                <p><b>Possui:<br></b>
+                    <input type="hidden" name="wifi" value="Não">
+                    <input type="checkbox" name="wifi" id="possuiWifi" value="Sim">
+                    <label>Wi-Fi<br></label>    
+                    <input type="hidden" name="estacionamento" value="Não">
+                    <input type="checkbox" name="estacionamento" id="possuiEst" value="Sim">
+                    <label>Estacionamento Grátis<br></label> 
+                    <input type="hidden" name="bebida" value="Não">
+                    <input type="checkbox" name="bebida" value="Sim">
+                    <label>Bebida Grátis<br></label>
+                </p>
+                <p><b>&nbsp;</b>
+                    <input type="submit" id="cadastro" value="Cadastrar">
+                </p>
+
+            </form>
+            <form class="formSelect">
+                <input type="button" id="eventos" value="Ver Img">
+            </form>
+        </div>
+    </body>
+</html>
